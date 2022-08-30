@@ -1,9 +1,7 @@
 <template>
-  <button>
-    <slot name="leftIcon"></slot>
+  <ol class="flex flex-col gap-5">
     <slot></slot>
-    <slot name="rightIcon"></slot>
-  </button>
+  </ol>
 </template>
 
 <script lang="ts">

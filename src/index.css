@@ -8,8 +8,57 @@
 }
 
 @font-face {
-    font-family: "Roboto";
+    font-family: "RobotoBold";
+    src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "RobotoRegular";
     src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 
+@layer utilities {
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+
+   p, li {
+       font-size: 1.5rem;
+    }
+
+    li {
+        text-align: left;
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 2px grey;
+        }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+            background: #FFBE2E;
+    }
+
+    @media (max-width: 1366px) {
+        h2 {
+            font-size: 2.5rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p, li {
+            font-size: 1rem;
+        }
+    }
+
+}
 
