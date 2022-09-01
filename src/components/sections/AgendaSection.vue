@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import CardComponent from "@/components/CardComponent.vue";
+import CardComponent from "@/components/custom-primitives/CardComponent.vue";
 import standards from "../../assets/images/standards.png"
 
 export default defineComponent({

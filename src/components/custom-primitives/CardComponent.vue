@@ -1,5 +1,9 @@
 <template>
-  <div class="card md:text-center w-full items-center card-side justify-center bg-base-100 box-content h-min shadow-xl min-h-min max-h-500px xl:flex-col xl:h-min">
+  <div
+      class="card relative z-[-1] h-full md:text-center items-center justify-center bg-base-100
+       box-content shadow-xl xl:flex-col xl:h-min mb-lg md:mb-md"
+      :class="{'card-side': $props.imageSrc, 'mb-0 md:mb-0': $props.resetMargins}"
+  >
     <div
         class="card-body xl:px-4 xl:w-full xl:text-center"
         :class="$props.imageSrc ? 'w-[50%]' : 'w-full'"
@@ -20,6 +24,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
+    resetMargins: Boolean,
     imageSrc: String,
     imageAlt: String
   },

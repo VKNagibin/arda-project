@@ -1,50 +1,63 @@
 <template>
-  <div class="flex flex-col items-center min-h-screen">
-    <PageHeader class="mb-lg sm:mb-[5vh]"/>
-    <div class="flex flex-col items-center w-[80%] sm:w-[90%] ">
-      <h1 class="uppercase font-oswald text-[3rem] sm:text-[1.5rem] text-center mb-md">
-        кластер сервисных it-компаний, работающих по аутсорс- и аутстафф-форматам
-      </h1>
-      <ITClusterSection />
-      <AgendaSection />
-      <MarketProblemsSection />
-      <ClusterMissionSection />
-      <YourBenefitSection />
-      <ParticipationCriteriaSection />
-      <EnterOurTeamSection />
-      <ClusterMembers />
-      <StatisticsSection />
-      <ARDABenefitsSection />
-    </div>
+  <div class="flex flex-col items-center w-screen min-h-screen">
+    <HeaderSection />
+
+    <page-container>
+
+      <template v-slot:heading>
+        <h1 class="page-heading">
+          кластер сервисных it-компаний, работающих по аутсорс- и аутстафф-форматам
+        </h1>
+      </template>
+
+      <template v-slot:default>
+        <ITClusterSection />
+        <AgendaSection />
+        <MarketProblemsSection />
+        <ClusterMissionSection />
+        <YourBenefitSection />
+        <ParticipationCriteriaSection />
+        <EnterOurTeamSection />
+        <ClusterMembers />
+        <StatisticsSection />
+        <ARDABenefitsSection />
+      </template>
+
+    </page-container>
+
     <FooterSection />
   </div>
 
 </template>
 
 <script lang="ts">
-import CustomList from "@/components/CustomList.vue";
-import PageHeader from "@/components/sections/PageHeader.vue";
+import HeaderSection from "@/components/sections/HeaderSection.vue";
 import AgendaSection from "@/components/sections/AgendaSection.vue";
 import MarketProblemsSection from "@/components/sections/MarketProblemsSection.vue";
 import ITClusterSection from "@/components/sections/ITClusterSection.vue";
-import CustomListItem from "@/components/CustomListItem.vue";
 import ClusterMissionSection from "@/components/sections/ClusterMissionSection.vue";
 import YourBenefitSection from "@/components/sections/YourBenefitSection.vue";
 import ParticipationCriteriaSection from "@/components/sections/ParticipationСriteriaSection.vue";
-import ButtonComponent from "@/components/ButtonComponent.vue";
-import ARDABenefitsSection from "@/components/sections/ARDABenefitsSection.vue";
-import QuantityPattern from "@/components/QuantityPattern.vue";
 import EnterOurTeamSection from "@/components/sections/EnterOurTeamSection.vue";
 import StatisticsSection from "@/components/sections/StatisticsSection.vue";
 import FooterSection from "@/components/sections/FooterSection.vue";
-import EntryForm from "@/components/EntryForm.vue";
-import ClusterMembers from "@/components/sections/СlusterMembers.vue"
+import ClusterMembers from "@/components/sections/СlusterMembers.vue";
+import ARDABenefitsSection from "@/components/sections/ARDABenefitsSection.vue";
+
+import PageContainer from "@/components/custom-primitives/PageContainer.vue";
+import CustomList from "@/components/custom-primitives/CustomList.vue";
+import CustomListItem from "@/components/custom-primitives/CustomListItem.vue";
+import ButtonComponent from "@/components/custom-primitives/ButtonComponent.vue";
+import QuantityPattern from "@/components/custom-primitives/QuantityPattern.vue";
+
+import EntryForm from "@/components/popups/EntryClusterPopup.vue";
+
 
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   components: {
-    PageHeader,
+    HeaderSection,
     CustomList,
     CustomListItem,
     ITClusterSection,
@@ -61,6 +74,7 @@ export default defineComponent({
     FooterSection,
     EntryForm,
     ClusterMembers,
+    PageContainer,
   },
 });
 </script>

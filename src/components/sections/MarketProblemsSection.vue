@@ -1,5 +1,5 @@
 <template>
-  <card-component class="mb-lg" >
+  <card-component class="mb-lg w-full" >
     <template v-slot:heading>
       <h2 class="font-oswald w-full pb-sm">Проблемы рынка</h2>
     </template>
@@ -24,9 +24,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import CardComponent from "@/components/CardComponent.vue";
-import CustomListItem from "@/components/CustomListItem.vue";
-import CustomList from "@/components/CustomList.vue";
+import CardComponent from "@/components/custom-primitives/CardComponent.vue";
+import CustomListItem from "@/components/custom-primitives/CustomListItem.vue";
+import CustomList from "@/components/custom-primitives/CustomList.vue";
 
 export default defineComponent({
   components: {

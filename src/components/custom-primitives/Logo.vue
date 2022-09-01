@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import BlackLogo from "../assets/images/logo-black.png"
-import WhiteLogo from "../assets/images/logo-white.png"
+import BlackLogo from "../../assets/images/logo-black.png"
+import WhiteLogo from "../../assets/images/logo-white.png"
 import { defineComponent } from 'vue';
 
 export default defineComponent({

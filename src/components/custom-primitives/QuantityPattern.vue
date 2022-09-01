@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import ChevronRight from "@/components/ChevronRight.vue";
+import ChevronRight from "@/components/custom-primitives/ChevronRight.vue";
 
 export default defineComponent({
   components: {

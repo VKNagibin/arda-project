@@ -3,7 +3,7 @@
   <div class="w-full border-x-[2px] border-arda-grey h-800px sm:mb-[10vh] mb-[20vh]">
     <div
         v-dragscroll="true"
-        :class="`w-full h-800px overflow-x-auto custom-scroll border-x-[40px] md:border-x-[20px] border-white p-[40px] outline-1 rounded-lg ${cursor} `"
+        :class="`w-full h-800px overflow-x-auto custom-scroll border-x-[40px] md:border-x-[20px] border-white p-[40px] outline-1 rounded-lg ${cursor}`"
         @mouseover="handleGrab"
         @mousedown="handleGrabbing"
         @mouseup="handleGrab"
@@ -40,9 +40,5 @@ export default defineComponent({
       this.cursor = "cursor-grabbing";
     }
   },
-
-  mounted() {
-    console.log(this.logos);
-  }
 })
 </script>

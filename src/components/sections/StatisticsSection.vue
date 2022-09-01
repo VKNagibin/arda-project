@@ -7,25 +7,23 @@
     </div>
 
     <div class="flex w-full ml-auto 2xl:justify-center justify-end">
-        <link-component
+        <a
             class="text-[2rem] flex hover:scale-[103%] transition-transform will-change-transform duration-200 items-center justify-center
             bg-black text-arda-orange border-[2px] border-arda-black"
             href="https://arda.digital/"
         >
           Подробнее
-        </link-component>
+        </a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import QuantityPattern from "@/components/QuantityPattern.vue";
-import LinkComponent from "@/components/LinkComponent.vue";
+import QuantityPattern from "@/components/custom-primitives/QuantityPattern.vue";
 
 export default defineComponent({
   components: {
-    LinkComponent,
     QuantityPattern,
   }
 });

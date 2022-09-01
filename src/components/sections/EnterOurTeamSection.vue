@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import EntryForm from "@/components/EntryForm.vue";
+import EntryForm from "@/components/popups/EntryClusterPopup.vue";
 
 export default defineComponent({
   components: {
@@ -38,13 +38,6 @@ export default defineComponent({
     closePopup() {
       this.showPopup = false;
     },
-  },
-
-  watch: {
-    showPopup: function(value: boolean) {
-      if (!value) return
-      document.body.style.overflowY = "hidden";
-      }
   },
 
 });
