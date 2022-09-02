@@ -27,12 +27,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { nanoid } from "nanoid";
-import HeaderSection from "@/components/sections/HeaderSection.vue";
 import CardComponent from "@/components/custom-primitives/CardComponent.vue";
 
 export default defineComponent({
   components: {
-    HeaderSection,
     CardComponent,
   },
 

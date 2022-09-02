@@ -7,9 +7,9 @@
       :need-own-scrollbar="true"
           >
       <div>
-        <h2>
+        <h3 class="-heading">
           ВСТУПИТЬ В ИТ-КЛАСТЕР
-        </h2>
+        </h3>
         <span class="block text-center font-roboto">
           Заполните заявку, чтобы присоединиться к сообществу
         </span>
@@ -53,7 +53,7 @@
       </div>
 
       <button-component
-          class="btn bg-arda-black text-white uppercase p-3 rounded-xl"
+          class="btn btn-outline text-white uppercase rounded-xl"
           @click.prevent
       >
         Отправить заявку

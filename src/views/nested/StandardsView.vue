@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-md mb-md">
-    <h2>Разработка отраслевого стандарта по аутстаффингу сотрудников:</h2>
+    <h3 class="-heading">Разработка отраслевого стандарта по аутстаффингу сотрудников:</h3>
     <custom-list class="gap-10">
       <cluster-standards-item
           v-for="standard in standards"
@@ -26,11 +26,12 @@
     <WantToArdaComponent />
   </div>
 
-  <FooterSection />
+  <Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Footer from "@/components/sections/Footer.vue";
 
 import standards from "@/configs/clusterStandards";
 import ClusterStandardsItem from "@/components/custom-primitives/ClusterStandardsItem.vue";
@@ -38,7 +39,6 @@ import CardComponent from "@/components/custom-primitives/CardComponent.vue";
 import CustomListItem from "@/components/custom-primitives/CustomListItem.vue";
 import CustomList from "@/components/custom-primitives/CustomList.vue";
 import WantToArdaComponent from "@/components/custom-primitives/WantToArdaComponent.vue";
-import FooterSection from "@/components/sections/FooterSection.vue";
 
 export default defineComponent({
   components: {
@@ -47,7 +47,7 @@ export default defineComponent({
     CustomListItem,
     CustomList,
     WantToArdaComponent,
-    FooterSection,
+    Footer,
   },
 
   data() {

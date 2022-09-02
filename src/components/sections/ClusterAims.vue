@@ -2,7 +2,7 @@
   <card-component class="w-full">
 
     <template v-slot:heading>
-      <h2>Цели кластера</h2>
+      <h3 class="-heading">Цели кластера</h3>
     </template>
 
     <template v-slot:default>

@@ -1,9 +1,9 @@
 <template>
-  <h3 class="text-center xl:text-[1.5rem] mb-lg">
+  <h3 class="text-center default-content mb-lg">
     Если вы разделяете принципы, и ваша компания подходит по вышеприведенным критериям, то мы будем рады видеть вас среди участников!
   </h3>
   <button
-      class="btn w-[300px] md:w-[150px] md:text-[1.5rem] md:h-[80px] border-4 uppercase text-[2rem] mb-lg font-roboto h-[100px] btn-outline btn-warning mb-md"
+      class="btn btn-outline uppercase mb-lg"
       @click="openPopup"
   >
     Вступить

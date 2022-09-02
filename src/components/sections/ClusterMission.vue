@@ -1,7 +1,7 @@
 <template>
   <card-component class="mb-lg w-full" >
     <template v-slot:heading>
-      <h2>Миссия кластера</h2>
+      Миссия кластера
     </template>
 
     <template v-slot:default>

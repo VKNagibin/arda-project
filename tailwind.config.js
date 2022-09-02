@@ -68,7 +68,7 @@ module.exports = {
         'arda-menu-color': "rgba(231,167,39,0.48)",
         'arda-deep-orange': "#ff8c2e",
         "arda-yellow": 'rgba(239,187,16,0.3)',
-        "popup": 'rgba(9,9,9,0.4)',
+        "popup": 'rgba(9,9,9,0.8)',
         "light-popup": 'rgba(9,9,9,0.05)',
       },
 

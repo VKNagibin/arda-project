@@ -15,14 +15,13 @@
       />
       <div class="flex w-full justify-end space-x-2.5">
         <button-component
-            class="btn btn-warning bg-white"
             @click.prevent="handleSaveButton"
         >
           Сохранить
         </button-component>
 
         <button-component
-            class="btn btn-warning bg-white"
+            class="btn btn-outline bg-white"
             @click.prevent="handleCloseInput"
         >
           Отмена

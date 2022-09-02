@@ -25,7 +25,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Logo from "@/components/custom-primitives/Logo.vue";
-import VCLogo from "@/assets/images/vc.png"
+import VCLogo from "@/assets/images/arda-style-components/vc.png"
 
 export default defineComponent({
   components: {

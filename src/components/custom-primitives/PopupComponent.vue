@@ -5,14 +5,10 @@
       @click="handlePopupClick"
       ref="popup"
   >
-    <button
-        class="absolute top-[10px] z-30 right-[10px] cursor-pointer after:z-40
+    <img :src="crossImage"
+        class="absolute w-[60px] top-[10px] z-30 right-[10px] cursor-pointer after:z-40
              after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0"
         @click="handlePopupClick">
-      <BIconXLg
-          class="text-[4rem] w-max text-white"
-      />
-    </button>
 
     <form
         v-if="!isNavbar"
@@ -43,6 +39,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import crossImage from "@/assets/images/arda-style-components/13.png"
 
 export default defineComponent({
   props: {
@@ -61,6 +58,12 @@ export default defineComponent({
   },
 
   emits: ["closePopup"],
+
+  data() {
+    return {
+      crossImage,
+    }
+  },
 
   methods: {
     toggleAnimationClasses() {

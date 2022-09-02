@@ -1,11 +1,12 @@
 <template>
   <card-component id="webinars">
     <template v-slot:heading>
-
-      <h2>Вебинары</h2>
+      Вебинары
+    </template>
+    <template>
       <custom-list>
-        <webinar-component v-for="webinar in webinars" :link="webinar.link">
-          <template v-slot:title>
+          <webinar-component v-for="webinar in webinars" :link="webinar.link">
+            <template v-slot:title>
             {{ webinar.title }}
           </template>
           <template v-slot:link>

@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ProfileView from "@/views/ProfileView.vue";
-import StandardsListSection from "@/components/sections/StandardsListSection.vue";
-import WebinarsSection from "@/components/sections/WebinarsSection.vue";
-import UserProfileSection from "@/components/sections/UserProfileSection.vue";
-import OperativeInformationSection from "@/components/sections/OperativeInformationSection.vue";
-import ResourceCardSection from "@/components/sections/ResourceCardSection.vue";
+import HomeView from '../views/general/HomeView.vue'
+import ProfileView from "@/views/general/ProfileView.vue";
+import StandardsListSection from "@/views/nested/StandardsView.vue";
+import WebinarsSection from "@/views/nested/WebinarsView.vue";
+import UserProfileSection from "@/components/sections/UserProfile.vue";
+import OperativeInformationSection from "@/views/nested/OperativeInformationView.vue";
+import ResourceCardSection from "@/views/nested/ResourceCardView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {

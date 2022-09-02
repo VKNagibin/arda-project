@@ -5,7 +5,7 @@
   >
     <button-component class="flex items-center self-center">
       <template v-slot:leftIcon>
-        <BIconPersonCircle class="text-[3rem] sm:text-[2rem] group-hover:text-arda-orange will-change-transform group-hover:scale-[103%] transition-all duration-200"/>
+        <BIconPersonSquare class="text-[3rem] sm:text-[2rem] group-hover:fill-arda-orange will-change-transform group-hover:scale-[103%] transition-all duration-200"/>
       </template>
     </button-component>
     <a
@@ -21,7 +21,7 @@
   </teleport>
 
   <teleport to="body">
-    <ProfilePopup
+    <Profile
         v-if="showProfile"
         @closeProfile="handleCloseProfile"
     />
@@ -35,12 +35,15 @@
     />
   </teleport>
 
-  <BIconPersonCircle
-      class="fixed z-100 text-[7rem] inline cursor-pointer top-[30px] right-[30px] text-[5rem] sm:text-[3rem] hover:text-arda-orange will-change-transform hover:scale-[103%] transition-all duration-200"
-      v-if="showBurger"
-      @click="handlePersonalPageButtonClick"
+  <teleport to="body">
+    <div class="w-max fixed z-1000 top-[30px] right-[30px] md:right-[15px] md:top-[15px] h-max bg-white fixed ">
+      <BIconPersonSquare
+          class=" text-[3rem] cursor-pointer sm:text-[2rem] hover:text-arda-orange will-change-auto hover:scale-[103%] transition-all duration-300"
+          v-if="showBurger"
+          @click="handlePersonalPageButtonClick"/>
+    </div>
+  </teleport>
 
-  />
 </template>
 
 <script lang="ts">
@@ -49,14 +52,14 @@ import { defineComponent } from 'vue';
 import SignInPopup from "@/components/popups/SignInPopup.vue";
 import ButtonComponent from "@/components/custom-primitives/ButtonComponent.vue";
 import NavbarComponent from "@/components/popups/NavbarComponent.vue";
-import ProfilePopup from "@/components/sections/UserProfileSection.vue";
+import Profile from "@/components/sections/UserProfile.vue";
 
 export default defineComponent({
   components: {
     SignInPopup,
     ButtonComponent,
     NavbarComponent,
-    ProfilePopup,
+    Profile,
   },
 
   props: {

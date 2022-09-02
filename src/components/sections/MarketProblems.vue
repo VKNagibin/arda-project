@@ -1,7 +1,7 @@
 <template>
   <card-component class="mb-lg w-full" >
     <template v-slot:heading>
-      <h2>Проблемы рынка</h2>
+      Проблемы рынка
     </template>
     <template v-slot:default>
       <custom-list>

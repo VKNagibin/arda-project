@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-full items-center">
-    <HeaderSection :signed-in="true"/>
+    <Header :signed-in="true"/>
     <page-container>
       <router-view></router-view>
     </page-container>
@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HeaderSection from "@/components/sections/HeaderSection.vue";
+import Header from "@/components/sections/Header.vue";
 import PageContainer from "@/components/custom-primitives/PageContainer.vue";
 
 export default defineComponent({
   components: {
-    HeaderSection,
+    Header,
     PageContainer,
   }
 }) as any;

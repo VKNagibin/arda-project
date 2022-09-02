@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full h-full flex-col gap-md xl:gap-md">
-      <h2>Профиль</h2>
+      Профиль
     <custom-list class="flex flex-col justify-around h-full w-[100%] border-2 p-md md:p-sm">
       <li class="flex items-end text-[2rem] lg:text-[1.7rem] sm:text-[1.3rem] md:flex-col lg:items-start gap-5">
         Электронная почта: <span>{{ user["e-mail"] }}</span>
@@ -19,10 +19,10 @@
       </li>
     </custom-list>
     <div class="flex gap-sm md:flex-col lg:self-center self-end">
-      <button-component class="btn btn-outline py-3 text-[1rem] box-content text-[1.5rem] will-change-transform">
+      <button-component class="btn btn-outline will-change-transform">
         Редактировать профиль
       </button-component>
-      <button-component class="btn btn-outline py-3 text-[1rem] box-content text-[1.5rem] will-change-transform">
+      <button-component class="btn btn-outline will-change-transform">
         Изменить пароль
       </button-component>
     </div>

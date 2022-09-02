@@ -8,7 +8,7 @@
 
     <div class="flex w-full ml-auto 2xl:justify-center justify-end">
         <button-component
-            class="btn btn-outline flex py-sm text-[1.5rem]"
+            class="btn btn-outline flex"
         >
           <a href="https://arda.digital/">
             Подробнее

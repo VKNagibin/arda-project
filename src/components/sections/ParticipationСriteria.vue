@@ -1,7 +1,7 @@
 <template>
   <card-component class="mb-md w-full xl:mb-sm" >
     <template v-slot:heading>
-      <h2>Критерии участия</h2>
+      Критерии участия
     </template>
     <template v-slot:default>
       <custom-list>

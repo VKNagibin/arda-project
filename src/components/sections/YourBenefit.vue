@@ -1,7 +1,7 @@
 <template>
   <card-component class="mb-lg" >
     <template v-slot:heading>
-      <h2>Какую выгоду вы получаете лично для себя?</h2>
+      Какую выгоду вы получаете лично для себя?
     </template>
     <template v-slot:default>
       <custom-list>

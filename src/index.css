@@ -21,6 +21,7 @@
 @layer base {
     * {
         font-family: "RobotoRegular", sans-serif;
+        color: black;
     }
 }
 
@@ -29,31 +30,28 @@
         @apply text-arda-deep-orange;
     }
     .page-heading {
-        @apply uppercase font-roboto text-[2.5rem] lg:text-[2rem] md:text-[1.7rem] text-center mb-md;
+        @apply uppercase font-roboto text-[1.5rem] text-center mb-md;
     }
 
-    .custom-list-item, .custom-paragraph {
-        font-size: 1.5rem;
+    .default-content {
+        font-size: 1rem;
     }
 
-    body {
+    .btn {
+        color: black;
+        border: 2px solid black;
+    }
+
+    html, body, #app {
+        width: 100vw;
+        background: white;
         overflow-x: hidden;
         min-height: 100vh;
     }
-    #app {
-        min-height: 100vh
-    }
 
-    h2 {
-        font-size: 3rem;
-        font-family: "RobotoRegular", sans-serif;
+    .section-heading {
+        width: 100%;
         text-align: left;
-    }
-    h3 {
-        font-size: 2rem;
-    }
-
-    h4 {
         font-size: 1.5rem;
     }
 
@@ -92,6 +90,9 @@
     }
 
     @media (max-width: 1366px) {
+        html {
+            font-size: 14px;
+        }
         h2 {
             font-size: 2.5rem;
         }
@@ -110,9 +111,17 @@
     }
 
     @media (max-width: 768px) {
+        html {
+            font-size: 12px;
+        }
         h3 {
             font-size: 1rem;
         }
+
+        .section-heading {
+            text-align: center;
+        }
+
         h2 {
             font-size: 2.5rem;
             text-align: center;

@@ -2,7 +2,7 @@
   <card-component class="w-full" >
 
     <template v-slot:heading>
-      <h2>Что уже сделано</h2>
+      Что уже сделано
     </template>
 
     <template v-slot:default>
