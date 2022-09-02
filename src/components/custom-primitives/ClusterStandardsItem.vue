@@ -5,12 +5,12 @@
        <div class="flex md:text-center flex-col gap-y-sm">
          <div class="flex md:flex-col items-center gap-x-[20px]">
 
-           <h3 v-if="!href">
+           <h3 class="text-[2rem] md:text-[1.5rem]" v-if="!href">
              <slot name="title"></slot>
            </h3>
 
            <a v-else class="underline text-arda-deep-orange" :href="href">
-             <h3>
+             <h3 class="text-[2rem] md:text-[1.5rem]">
              <slot name="title"></slot>
              </h3>
            </a>
@@ -21,8 +21,6 @@
          </div>
 
          <slot name="description"></slot>
-
-         <a v-if="href" :href="href" class="md:self-center w-min arda-link">Ознакомиться</a>
        </div>
      </custom-list-item>
    </template>

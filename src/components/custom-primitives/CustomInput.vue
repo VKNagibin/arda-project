@@ -1,11 +1,15 @@
 <template>
-  <label v-if="$props.needLabel" for="$props.id"></label>
-  <input
-      :type="inputType"
-      :placeholder="placeholder"
-      class="font-roboto-bold text-[1.5rem] font-bold input py-2.5 text-arda-black bg-[white] input-bordered input-warning w-full"
-      @input="handleInput"
-  />
+  <div class="flex flex-col gap-y-1.5">
+    <label class="text-[1.5rem]" v-if="$props.label" for="$props.id">
+      {{ $props.label }}
+    </label>
+    <input
+        :type="inputType"
+        :placeholder="inputPlaceholder"
+        class="font-roboto-bold text-[1.2rem] font-bold input py-2.5 text-arda-black bg-[white] input-bordered input-warning w-full"
+        @input="handleInput"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,8 +18,8 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   props: {
     type: String,
-    content: String,
-    needLabel: Boolean,
+    placeholder: String,
+    label: String,
     id: String,
   },
 
@@ -30,8 +34,8 @@ export default defineComponent({
     inputType(): string {
       return this.$props.type ? this.$props.type : "text";
     },
-    placeholder(): string {
-      return this.$props.content ? this.$props.content : "";
+    inputPlaceholder(): string {
+      return this.$props.placeholder ? this.$props.placeholder : "";
     }
   }
 })

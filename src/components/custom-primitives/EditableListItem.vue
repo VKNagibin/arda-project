@@ -38,20 +38,5 @@ export default defineComponent({
     content: String,
   },
 
-  data() {
-    return {
-      showEditInput: false,
-    }
-  },
-
-  methods: {
-    handleCloseEditInput() {
-      this.showEditInput = false;
-    },
-    handleEditingItem() {
-      this.showEditInput = true;
-    }
-  }
-
 })
 </script>

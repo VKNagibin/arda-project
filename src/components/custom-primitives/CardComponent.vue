@@ -1,6 +1,6 @@
 <template>
   <div
-      class="card relative z-[-1] h-full md:text-center items-center justify-center bg-base-100
+      class="card relative z-[-1] w-full h-full md:text-center items-center justify-center bg-base-100
        box-content shadow-xl xl:flex-col xl:h-min mb-lg md:mb-md"
       :class="{'card-side': $props.imageSrc, 'mb-0 md:mb-0': $props.resetMargins}"
   >

@@ -40,7 +40,6 @@ import CustomInput from "@/components/custom-primitives/CustomInput.vue";
 import ButtonComponent from "@/components/custom-primitives/ButtonComponent.vue";
 import ForgotPasswordPopup from "@/components/popups/ForgotPasswordPopup.vue";
 
-
 export default defineComponent({
   components: {
     PopupComponent,
@@ -69,7 +68,7 @@ export default defineComponent({
     handleEntryButton() {
       if (this.loginInputValue !== "Admin") return
       if (this.passwordInputValue !== "12345") return
-      this.$router.push("/profilePage");
+      this.$router.push("/profilePage/operativeInfo");
     },
     closeSignInPopup(id: string) {
       if (this.showForgotPasswordPopup) return
@@ -77,7 +76,6 @@ export default defineComponent({
     },
     handleForgotPassword() {
       this.showForgotPasswordPopup = true;
-
     },
     closeForgotPasswordPopup(id: string) {
       this.showForgotPasswordPopup = false

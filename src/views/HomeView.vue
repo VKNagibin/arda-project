@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-col items-center w-screen min-h-screen">
-    <HeaderSection />
-
+    <HeaderSection/>
     <page-container>
-
       <template v-slot:heading>
         <h1 class="page-heading">
           кластер сервисных it-компаний, работающих по аутсорс- и аутстафф-форматам

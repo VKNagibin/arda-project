@@ -6,15 +6,15 @@
       form-animation="animate-close-menu"
       @closePopup="closeMenu"
   >
-    <navbar-item @click="handleShowingProfile">Профиль</navbar-item>
-    <navbar-item v-scroll-to="'#operativeInfo'" >Оперативная информация</navbar-item>
-    <navbar-item v-scroll-to="'#standards'" >Стандарты</navbar-item>
-    <navbar-item v-scroll-to="'#webinars'" >Вебинары</navbar-item>
-    <navbar-item>Ресурсная карта</navbar-item>
-    <navbar-item>Календарь мероприятий</navbar-item>
-    <navbar-item>FAQ</navbar-item>
-    <navbar-item>Обмен лидами/клиентами</navbar-item>
-    <navbar-item>Полезные ссылки</navbar-item>
+    <navbar-item to="profile">Профиль</navbar-item>
+    <navbar-item to="operativeInfo" >Оперативная информация</navbar-item>
+    <navbar-item to="standards">Стандарты</navbar-item>
+    <navbar-item to="webinars">Вебинары</navbar-item>
+    <navbar-item to="resourceCard">Ресурсная карта</navbar-item>
+<!--    <navbar-item>Календарь мероприятий</navbar-item>-->
+<!--    <navbar-item>FAQ</navbar-item>-->
+<!--    <navbar-item>Обмен лидами/клиентами</navbar-item>-->
+<!--    <navbar-item>Полезные ссылки</navbar-item>-->
   </popup-component>
 </template>
 
@@ -33,20 +33,14 @@ export default defineComponent({
   emits: ["closeMenu", "openProfile"],
 
   methods: {
-    handleShowingProfile() {
-      this.$emit("openProfile");
-    },
     closeMenu() {
       this.$emit("closeMenu");
     }
   },
 
-
   beforeMount() {
     document.body.style.overflowX = "hidden";
   }
-
-
 
 })
 </script>

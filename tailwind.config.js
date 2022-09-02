@@ -52,12 +52,12 @@ module.exports = {
       },
 
       animation: {
-        form: 'form .3s ease-in-out forwards ',
+        form: 'form .5s ease-in-out forwards ',
         menu: 'menu .3s ease-in-out forwards ',
         pop: 'pop .3s ease-in-out forwards ',
         'menu-item-hover': 'menu-item-hover .3s ease-in-out forwards ',
         'close-menu': 'close-menu .3s ease-in-out forwards ',
-        'close-forms': 'close-forms .3s ease-in-out forwards ',
+        'close-forms': 'close-forms .5s ease-in-out forwards ',
         'close-pop': 'close-pop .3s ease-in-out forwards ',
       },
 

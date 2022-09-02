@@ -1,4 +1,5 @@
 <template>
+  <div class="flex w-screen flex-col">
   <div class="flex justify-around md:space-y-md sm:space-y-sm items-center md:flex-col bg-arda-black w-full py-md sm:py-sm">
     <Logo class="w-[200px] sm:w-[100px] md:w-[150px] object-contain" white="true" />
     <a class="text-[1.5rem] cursor-pointer border-none transition-colors duration-300 text-arda-orange font-roboto hover:text-arda-orange hover:border-arda-orange italic"
@@ -9,7 +10,6 @@
       <img class="w-[100px] md:w-[100px] " :src="VCLogo" alt="VC.RU">
     </a>
   </div>
-
   <div class="py-1.5 w-full bg-arda-grey text-[1.5rem] sm:text-[1rem] text-center">
     ARDA(c)
     <a href="#" class="text-arda-deep-orange">
@@ -17,6 +17,9 @@
     </a>
     Информация на сайте не является публичной офертой
   </div>
+  </div>
+
+
 </template>
 
 <script lang="ts">

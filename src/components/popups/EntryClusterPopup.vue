@@ -7,7 +7,7 @@
       :need-own-scrollbar="true"
           >
       <div>
-        <h2 class="font-oswald text-[2rem] sm:text-[1.5rem] text-center">
+        <h2>
           ВСТУПИТЬ В ИТ-КЛАСТЕР
         </h2>
         <span class="block text-center font-roboto">

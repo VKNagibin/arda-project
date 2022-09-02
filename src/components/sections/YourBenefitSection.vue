@@ -1,7 +1,7 @@
 <template>
   <card-component class="mb-lg" >
     <template v-slot:heading>
-      <h2 class="font-oswald w-full pb-sm">Какую выгоду вы получаете лично для себя?</h2>
+      <h2>Какую выгоду вы получаете лично для себя?</h2>
     </template>
     <template v-slot:default>
       <custom-list>

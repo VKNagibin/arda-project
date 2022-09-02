@@ -49,7 +49,7 @@ import { defineComponent } from 'vue';
 import SignInPopup from "@/components/popups/SignInPopup.vue";
 import ButtonComponent from "@/components/custom-primitives/ButtonComponent.vue";
 import NavbarComponent from "@/components/popups/NavbarComponent.vue";
-import ProfilePopup from "@/components/popups/ProfilePopup.vue";
+import ProfilePopup from "@/components/sections/UserProfileSection.vue";
 
 export default defineComponent({
   components: {
@@ -86,7 +86,6 @@ export default defineComponent({
         this.showMenu = !this.showMenu;
         return
       }
-
       this.showSignInPopup = true;
     },
     handleCloseSignInPopup() {

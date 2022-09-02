@@ -1,9 +1,4 @@
-interface Standard {
-    title: string,
-    date?: string,
-    description?: string,
-    link?: string,
-}
+import Standard from "@/interfaces/Standard";
 
 const standards: Standard[] = [
     {
@@ -18,7 +13,7 @@ const standards: Standard[] = [
         link: "#",
     } as Standard,
     {
-        title:"РЕЛИЗ 2.0: РЕЗЮМЕ СОТРУДНИКОВ",
+        title:"РЕЛИЗ 2.0: Резюме сотрудников",
         date: "~ 3 квартал",
         description:
             `
@@ -29,7 +24,7 @@ const standards: Standard[] = [
         link: "",
     } as Standard,
     {
-        title:"РЕЛИЗ 3.0: ОНБОРДИНГ И ОФБОРДИНГ",
+        title:"РЕЛИЗ 3.0: Онбординг и офбординг",
         date: "~ 4 квартал",
         description:
             `

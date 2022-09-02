@@ -1,5 +1,5 @@
 <template>
-    <li class="flex items-center gap-3">
+    <li class="flex custom-list-item items-center gap-3">
       <span v-if="!hideMarkers">
         <BIconCaretRightFill class="text-[1.5rem] text-arda-orange"/>
       </span>

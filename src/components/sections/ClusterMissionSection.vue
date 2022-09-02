@@ -1,7 +1,7 @@
 <template>
   <card-component class="mb-lg w-full" >
     <template v-slot:heading>
-      <h2 class="font-oswald w-full pb-sm">Миссия кластера</h2>
+      <h2>Миссия кластера</h2>
     </template>
 
     <template v-slot:default>

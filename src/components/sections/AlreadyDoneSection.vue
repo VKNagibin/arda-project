@@ -1,8 +1,8 @@
 <template>
-  <card-component class="mb-lg w-full" >
+  <card-component class="w-full" >
 
     <template v-slot:heading>
-      <h2 class="font-oswald w-full pb-sm">Что уже сделано</h2>
+      <h2>Что уже сделано</h2>
     </template>
 
     <template v-slot:default>

@@ -1,5 +1,5 @@
 <template>
-  <h2 class="font-bold font-roboto-bold pb-md text-center">Участники кластера</h2>
+  <h2>Участники кластера</h2>
   <div class="w-full border-x-[2px] border-arda-grey h-800px sm:mb-[10vh] mb-[20vh]">
     <div
         v-dragscroll="true"

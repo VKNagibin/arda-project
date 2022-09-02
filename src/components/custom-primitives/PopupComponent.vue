@@ -1,7 +1,7 @@
 <template>
   <div
       class="fixed flex flex-col animate-pop will-change-transform w-full h-full items-center top-0 left-0 overflow-hidden bg-popup z-10"
-      :class="{'justify-center': $props.centered, 'overflow-y-scroll': $props.needOwnScrollbar}"
+      :class="{'justify-center': $props.centered, 'overflow-y-hidden': $props.needOwnScrollbar}"
       @click="handlePopupClick"
       ref="popup"
   >
@@ -13,6 +13,7 @@
           class="text-[4rem] w-max text-white"
       />
     </button>
+
     <form
         v-if="!isNavbar"
         action=""
@@ -22,6 +23,7 @@
     >
       <slot></slot>
     </form>
+
     <div
         v-else
         class="w-full h-full overflow-hidden"

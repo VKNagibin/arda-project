@@ -18,29 +18,43 @@
     src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
 }
 
+@layer base {
+    * {
+        font-family: "RobotoRegular", sans-serif;
+    }
+}
+
 @layer utilities {
     .arda-link {
         @apply text-arda-deep-orange;
     }
     .page-heading {
-        @apply uppercase font-roboto-bold text-[3rem] sm:text-[1.5rem] text-center mb-md;
+        @apply uppercase font-roboto text-[2.5rem] lg:text-[2rem] md:text-[1.7rem] text-center mb-md;
     }
+
+    .custom-list-item, .custom-paragraph {
+        font-size: 1.5rem;
+    }
+
     body {
         overflow-x: hidden;
+        min-height: 100vh;
     }
+    #app {
+        min-height: 100vh
+    }
+
     h2 {
         font-size: 3rem;
+        font-family: "RobotoRegular", sans-serif;
+        text-align: left;
     }
     h3 {
         font-size: 2rem;
     }
 
-   p, li {
-       font-size: 1.5rem;
-    }
-
-    li {
-        text-align: left;
+    h4 {
+        font-size: 1.5rem;
     }
 
     .skew-item {
@@ -89,12 +103,19 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        h2 {
+            text-align: center;
+        }
+    }
+
     @media (max-width: 768px) {
         h3 {
             font-size: 1rem;
         }
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            text-align: center;
         }
     }
 
