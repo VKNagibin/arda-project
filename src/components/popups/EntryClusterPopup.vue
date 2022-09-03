@@ -1,26 +1,26 @@
 <template>
   <popup-component
-      add-class="text-[1rem] w-1/2 xl:px-sm lg:w-2/3 md:w-[90%]
+      add-class="text-[1rem] w-1/2 px-[2rem] lg:w-2/3 md:w-[90%]
          space-y-5 bg-white rounded-md relative z-20 flex flex-col mt-[10vh] mb-[10vh]"
       form-animation="animate-close-forms"
       popup-animation="animate-close-pop"
       :need-own-scrollbar="true"
           >
       <div>
-        <h3 class="-heading">
+        <h2 class="text-[1.5rem] text-center">
           ВСТУПИТЬ В ИТ-КЛАСТЕР
-        </h3>
+        </h2>
         <span class="block text-center font-roboto">
           Заполните заявку, чтобы присоединиться к сообществу
         </span>
       </div>
 
-      <CustomInput type="email" content="E-mail"/>
-      <CustomInput content="Имя"/>
-      <CustomInput content="Фамилия"/>
-      <CustomInput content="Должость"/>
-      <CustomInput content="Название компании"/>
-      <CustomInput content="Ссылка на сайт компании"/>
+      <CustomInput type="email" placeholder="E-mail"/>
+      <CustomInput placeholder="Имя"/>
+      <CustomInput placeholder="Фамилия"/>
+      <CustomInput placeholder="Должость"/>
+      <CustomInput placeholder="Название компании"/>
+      <CustomInput placeholder="Ссылка на сайт компании"/>
 
       <h4 class="font-bold font-roboto-bold" >
         Программисты составляют бОльшую долю штата наемных сотрудников?

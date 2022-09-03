@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-screen flex-col">
+  <div class="flex w-screen overflow-hidden flex-col">
   <div class="flex justify-around md:space-y-md sm:space-y-sm items-center md:flex-col bg-arda-black w-full py-md sm:py-sm">
     <Logo class="w-[200px] sm:w-[100px] md:w-[150px] object-contain" white="true" />
     <a class="text-[1.5rem] cursor-pointer border-none transition-colors duration-300 text-arda-orange font-roboto hover:text-arda-orange hover:border-arda-orange italic"

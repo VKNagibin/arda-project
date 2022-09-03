@@ -18,7 +18,7 @@
       забыли пароль?
     </a>
     <button-component
-        class="btn will-change-transform"
+        class="btn btn-outline will-change-transform"
         @click.prevent="handleEntryButton"
     >
       Войти

@@ -1,7 +1,7 @@
 <template>
   <div
-      class="fixed flex flex-col animate-pop will-change-transform w-full h-full items-center top-0 left-0 overflow-hidden bg-popup z-10"
-      :class="{'justify-center': $props.centered, 'overflow-y-hidden': $props.needOwnScrollbar}"
+      class="fixed flex flex-col animate-pop will-change-transform items-center w-screen h-screen top-0 left-0  overflow-x-hidden bg-popup z-10"
+      :class="{'justify-center': $props.centered, 'overflow-y-scroll': $props.needOwnScrollbar}"
       @click="handlePopupClick"
       ref="popup"
   >
@@ -14,7 +14,7 @@
         v-if="!isNavbar"
         action=""
         ref="form"
-        class=" flex-col absolute rounded-lg will-change-transform animate-form sm:w-[95%] flex px-lg py-md"
+        class=" flex-col absolute rounded-lg will-change-transform animate-form sm:w-[90%] flex py-md"
         :class="$props.addClass"
     >
       <slot></slot>
@@ -119,7 +119,7 @@ export default defineComponent({
   },
 
   beforeUnmount() {
-    document.body.style.overflowY = "auto";
+    document.documentElement.style.overflow = "auto";
     window.removeEventListener("animationend", this.clearContainer);
     window.removeEventListener("keydown", this.handleEscClick);
     this.popup.removeEventListener("animationend", this.removePopupOpeningAnimations);
@@ -134,7 +134,7 @@ export default defineComponent({
   beforeMount() {
     window.addEventListener("keydown", this.handleEscClick);
     if(!this.needOwnScrollbar) return
-    document.body.style.overflowY = "hidden";
+    document.documentElement.style.overflow = "hidden";
   }
 });
 
