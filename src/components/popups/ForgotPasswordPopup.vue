@@ -2,8 +2,8 @@
   <popup-component
       add-class="w-1/4 bg-white justify-self-center overflow-hidden p-[40px] z-21 items-center space-y-10"
       :centered="true"
-      form-animation="animate-close-forms"
-      popup-animation="animate-close-pop"
+      form-animation="hide-form"
+      popup-animation="hide-popup"
   >
     <span class="text-center">Оставьте заявку на it@arda.digital для восстановления пароля</span>
   </popup-component>

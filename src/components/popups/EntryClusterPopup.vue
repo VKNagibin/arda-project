@@ -2,9 +2,10 @@
   <popup-component
       add-class="text-[1rem] w-1/2 px-[2rem] lg:w-2/3 md:w-[90%]
          space-y-5 bg-white rounded-md relative z-20 flex flex-col mt-[10vh] mb-[10vh]"
-      form-animation="animate-close-forms"
-      popup-animation="animate-close-pop"
+      form-animation="hide-form"
+      popup-animation="hide-popup"
       :need-own-scrollbar="true"
+      @closePopup="handleClosePopup"
           >
       <div>
         <h2 class="text-[1.5rem] text-center">
@@ -80,5 +81,14 @@ export default defineComponent({
     CustomCheckbox,
     PopupComponent,
   },
+
+  emits: ["closePopup"],
+
+  methods: {
+    handleClosePopup() {
+      this.$emit('closePopup');
+    }
+  }
+
 })
 </script>

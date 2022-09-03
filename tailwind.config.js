@@ -21,44 +21,44 @@ module.exports = {
        "inner-border": "20px solid black",
       },
       keyframes: {
-        'close-pop': {
+        'hide-popup': {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
         },
-        'close-forms': {
+        'hide-form': {
           '0%': { transform: "translateY(0)" },
-          '100%': { transform: "translateY(50%)"},
+          '100%': { transform: "translateY(50vh)"},
+        },
+        'hide-menu': {
+          '0%': { transform: "translateX(0)" },
+          '100%': { transform: "translateX(100vw)"},
         },
         'menu-item-hover': {
           '0%': { transform: "translateX(0)" },
           '100%': { transform: "translateX(100%)"},
         },
-        menu: {
-          '0%': { transform: "translateX(100%)" },
+        'menu-appear': {
+          '0%': { transform: "translateX(100vw)" },
           '100%': { transform: "translateX(0)"},
         },
-        'close-menu': {
-          '0%': { transform: "translateX(0)" },
-          '100%': { transform: "translateX(100%)"},
-        },
-        pop: {
+        'popup-appear': {
           '0%': { opacity: '0'},
           '100%': { opacity: '1' },
         },
-        form: {
-          '0%': { transform: "translateY(50%)" },
+        'form-appear': {
+          '0%': { transform: "translateY(50vh)" },
           '100%': { transform: "translateY(0)" },
         },
       },
 
       animation: {
-        form: 'form .5s ease-in-out forwards ',
-        menu: 'menu .3s ease-in-out forwards ',
-        pop: 'pop .3s ease-in-out forwards ',
-        'menu-item-hover': 'menu-item-hover .3s ease-in-out forwards ',
-        'close-menu': 'close-menu .3s ease-in-out forwards ',
-        'close-forms': 'close-forms .5s ease-in-out forwards ',
-        'close-pop': 'close-pop .3s ease-in-out forwards ',
+        'form-appear': 'form-appear .5s  forwards ',
+        'menu-appear': 'menu-appear .5s forwards ',
+        'popup-appear': 'popup-appear .5s forwards ',
+        'menu-item-hover': 'menu-item-hover .5s forwards ',
+        'hide-menu': 'hide-menu .5s  forwards ',
+        'hide-form': 'hide-form .5s  forwards ',
+        'hide-popup': 'hide-popup .5s forwards ',
       },
 
       colors: {

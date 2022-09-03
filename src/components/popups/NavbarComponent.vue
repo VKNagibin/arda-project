@@ -1,9 +1,9 @@
 <template>
   <popup-component
       :isNavbar="true"
-      class="overflow-hidden"
-      popup-animation="animate-close-pop"
-      form-animation="animate-close-menu"
+      add-class="overflow-hidden bg-black"
+      popup-animation="hide-popup"
+      form-animation="hide-menu"
       @closePopup="closeMenu"
   >
     <navbar-item to="profile">Профиль</navbar-item>

@@ -1,20 +1,19 @@
 <template>
   <div
-      class="fixed flex flex-col animate-pop will-change-transform items-center w-screen h-screen top-0 left-0  overflow-x-hidden bg-popup z-10"
-      :class="{'justify-center': $props.centered, 'overflow-y-scroll': $props.needOwnScrollbar}"
+      class="fixed flex flex-col popup-appear will-change-transform w-full h-full items-center top-0 left-0 overflow-x-hidden bg-popup z-10"
+      :class="{'justify-center': $props.centered, 'overflow-y-hidden': !$props.needOwnScrollbar}"
       @click="handlePopupClick"
       ref="popup"
   >
     <img :src="crossImage"
-        class="absolute w-[60px] top-[10px] z-30 right-[10px] cursor-pointer after:z-40
-             after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0"
+        class="block absolute top-[10px] z-30 right-[10px] w-[50px] cursor-pointer"
         @click="handlePopupClick">
 
     <form
         v-if="!isNavbar"
         action=""
         ref="form"
-        class=" flex-col absolute rounded-lg will-change-transform animate-form sm:w-[90%] flex py-md"
+        class=" flex-col absolute rounded-lg will-change-transform form-appear sm:w-[95%] flex px-lg py-md"
         :class="$props.addClass"
     >
       <slot></slot>
@@ -27,7 +26,7 @@
         @click="handleMenuClick">
       <ul
           @click.stop="handleMenuClick"
-          class="flex flex-col justify-center items-center animate-menu bg-arda-black
+          class="flex flex-col justify-center items-center menu-appear bg-arda-black
                  h-full over w-1/3 top-0 right-0 md:w-[90%] fixed space-y-8 z-10"
           :class="$props.addClass"
       >
@@ -46,11 +45,11 @@ export default defineComponent({
     needOwnScrollbar: Boolean,
     addClass: String,
     isNavbar: Boolean,
-    popupAnimation: {
+    formAnimation: {
       type: String,
       required: true,
     },
-    formAnimation: {
+    popupAnimation: {
       type: String,
       required: true,
     },
@@ -66,40 +65,60 @@ export default defineComponent({
   },
 
   methods: {
-    toggleAnimationClasses() {
-      (this.$refs.popup as HTMLDivElement).classList.toggle(this.$props.popupAnimation);
-      (this.$refs.form as HTMLFormElement).classList.toggle(this.$props.formAnimation);
-    },
-
-    removePopupOpeningAnimations() {
-      this.popup.classList.remove("animate-pop");
-    },
-
-    removeFormOpeningAnimations() {
-      this.form.classList.remove("animate-form");
-      this.form.classList.remove("animate-menu");
-    },
-
-    closePopup() {
-      this.startAnimation();
-      window.addEventListener("animationend", this.clearContainer);
-    },
-
-    startAnimation() {
-      this.toggleAnimationClasses();
-    },
-
-    clearContainer() {
-      this.toggleAnimationClasses();
-      this.$emit("closePopup");
-    },
-
-    handleMenuClick() {
+    handlePopupClick(e: MouseEvent): void {
+      if (e.target !== e.currentTarget) return
       this.closePopup();
     },
 
-    handlePopupClick(e: MouseEvent): void {
-      if ( e.target !== e.currentTarget ) return
+    addAnimationClass(element: HTMLElement, value: string) {
+      element.classList.add(value);
+    },
+
+    removeAnimationClass(element: HTMLElement, value: string) {
+      element.classList.remove(value);
+    },
+
+    removeNavbarOpeningAnimation(animationName: string) {
+      if (animationName !== 'menu-appear') return
+      this.removeAnimationClass(this.form, 'menu-appear');
+    },
+
+    removeFormOpeningAnimation(animationName: string) {
+      if (animationName !== 'form-appear') return
+      this.removeAnimationClass(this.form, 'form-appear');
+    },
+
+    removeContentOpeningAnimations(e: AnimationEvent) {
+      const animationName = e.animationName;
+      this.removeNavbarOpeningAnimation(animationName);
+      this.removeFormOpeningAnimation(animationName);
+    },
+
+    removePopupOpeningAnimations(e: any) {
+      if (e.animationName !== 'popup-appear') return
+      this.removeAnimationClass(this.popup, 'popup-appear');
+    },
+
+    closePopup() {
+      this.addAnimationClass(this.popup, this.$props.popupAnimation);
+      this.addAnimationClass(this.form, this.$props.formAnimation);
+      window.addEventListener("animationend", this.clearFormContainer);
+      window.addEventListener("animationend", this.clearPopupContainer);
+    },
+
+    clearFormContainer(e: any) {
+      if (e.animationName !== this.$props.formAnimation) return
+      this.removeAnimationClass(this.form, this.$props.formAnimation);
+      this.$emit("closePopup");
+
+    },
+
+    clearPopupContainer(e: any) {
+      if (e.animationName !== this.$props.popupAnimation) return
+      this.removeAnimationClass(this.popup, this.$props.popupAnimation);
+    },
+
+    handleMenuClick() {
       this.closePopup();
     },
 
@@ -110,31 +129,32 @@ export default defineComponent({
   },
 
   computed: {
-    popup() {
-      return (this.$refs.popup as HTMLDivElement);
-    },
     form() {
       return (this.$refs.form as HTMLFormElement);
+    },
+    popup() {
+      return (this.$refs.popup as HTMLFormElement);
     }
   },
 
   beforeUnmount() {
-    document.documentElement.style.overflow = "auto";
-    window.removeEventListener("animationend", this.clearContainer);
-    window.removeEventListener("keydown", this.handleEscClick);
-    this.popup.removeEventListener("animationend", this.removePopupOpeningAnimations);
-    this.form.removeEventListener("animationend", this.removeFormOpeningAnimations);
+    document.documentElement.style.overflowY = "auto";
+    window.removeEventListener("animationend", this.clearPopupContainer);
+    window.removeEventListener("animationend", this.clearFormContainer);
+    window.removeEventListener("animationend", this.removePopupOpeningAnimations);
+    window.removeEventListener("animationend", this.removeContentOpeningAnimations);
   },
 
   mounted() {
-    this.popup.addEventListener("animationend", this.removePopupOpeningAnimations);
-    this.form.addEventListener("animationend", this.removeFormOpeningAnimations);
+    window.addEventListener("animationend", this.removePopupOpeningAnimations);
+    window.addEventListener("animationend", this.removeContentOpeningAnimations);
+
+    if(!this.needOwnScrollbar) return
+    document.documentElement.style.overflowY = "hidden";
   },
 
   beforeMount() {
     window.addEventListener("keydown", this.handleEscClick);
-    if(!this.needOwnScrollbar) return
-    document.documentElement.style.overflow = "hidden";
   }
 });
 

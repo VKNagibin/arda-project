@@ -1,21 +1,21 @@
 <template>
   <div class="flex flex-col w-full items-center">
     <Header :signed-in="true"/>
-    <page-container>
-      <router-view></router-view>
-    </page-container>
+    <view-container>
+      <router-view />
+    </view-container>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Header from "@/components/sections/Header.vue";
-import PageContainer from "@/components/custom-primitives/PageContainer.vue";
+import ViewContainer from "@/components/custom-primitives/ViewContainer.vue";
 
 export default defineComponent({
   components: {
     Header,
-    PageContainer,
+    ViewContainer,
   }
 }) as any;
 

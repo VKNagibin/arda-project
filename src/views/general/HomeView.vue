@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center w-screen min-h-screen">
     <Header/>
-    <page-container>
+    <view-container>
       <template v-slot:heading>
         <h1 class="page-heading">
           кластер сервисных it-компаний, работающих по аутсорс- и аутстафф-форматам
@@ -21,7 +21,7 @@
         <ARDABenefits />
       </template>
 
-    </page-container>
+    </view-container>
 
     <Footer />
   </div>
@@ -42,7 +42,7 @@ import Footer from "@/components/sections/Footer.vue";
 import ClusterMembers from "@/components/sections/СlusterMembers.vue";
 import ARDABenefits from "@/components/sections/ARDABenefits.vue";
 
-import PageContainer from "@/components/custom-primitives/PageContainer.vue";
+import ViewContainer from "@/components/custom-primitives/ViewContainer.vue";
 import CustomList from "@/components/custom-primitives/CustomList.vue";
 import CustomListItem from "@/components/custom-primitives/CustomListItem.vue";
 import ButtonComponent from "@/components/custom-primitives/ButtonComponent.vue";
@@ -72,7 +72,7 @@ export default defineComponent({
     Footer,
     EntryForm,
     ClusterMembers,
-    PageContainer,
+    ViewContainer,
   },
 });
 </script>

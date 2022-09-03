@@ -1,8 +1,8 @@
 <template>
   <popup-component
-      add-class="w-1/3 bg-white items-center md:px-sm space-y-10"
-      form-animation="animate-close-forms"
-      popup-animation="animate-close-pop"
+      add-class="w-1/3 bg-white items-center md:px-sm space-y-[1rem]"
+      form-animation="hide-form"
+      popup-animation="hide-popup"
       :centered="true"
       @closePopup="closeSignInPopup"
   >
