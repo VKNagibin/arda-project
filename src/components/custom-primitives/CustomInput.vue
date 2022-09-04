@@ -6,7 +6,7 @@
     <input
         :type="inputType"
         :placeholder="inputPlaceholder"
-        class="font-roboto-bold text-[1.2rem] font-bold input py-2.5 text-arda-black bg-[white] input-bordered input-warning w-full"
+        class="font-roboto-bold text-[1rem] font-bold input py-2.5 text-arda-black bg-[white] input-bordered input-warning w-full"
         @input="handleInput"
     />
   </div>

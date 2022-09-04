@@ -55,7 +55,7 @@ module.exports = {
         'form-appear': 'form-appear .5s  forwards ',
         'menu-appear': 'menu-appear .5s forwards ',
         'popup-appear': 'popup-appear .5s forwards ',
-        'menu-item-hover': 'menu-item-hover .5s forwards ',
+        'menu-item-hover': 'menu-item-hover .3s forwards ',
         'hide-menu': 'hide-menu .5s  forwards ',
         'hide-form': 'hide-form .5s  forwards ',
         'hide-popup': 'hide-popup .5s forwards ',

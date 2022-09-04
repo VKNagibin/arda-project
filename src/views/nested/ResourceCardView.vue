@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[90vw] flex gap-5">
+  <div class="w-[90vw] flex gap-5 mb-[2rem]">
     <CompanySpecialization
         heading="Аутсорсинг и аутстаффинг"
         :companies="outstaffingAndOutsourcing"

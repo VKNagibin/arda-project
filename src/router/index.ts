@@ -3,7 +3,7 @@ import HomeView from '../views/general/HomeView.vue'
 import ProfileView from "@/views/general/ProfileView.vue";
 import StandardsListSection from "@/views/nested/StandardsView.vue";
 import WebinarsSection from "@/views/nested/WebinarsView.vue";
-import UserProfileSection from "@/components/sections/UserProfile.vue";
+import UserProfileSection from "@/views/nested/UserProfileView.vue";
 import OperativeInformationSection from "@/views/nested/OperativeInformationView.vue";
 import ResourceCardSection from "@/views/nested/ResourceCardView.vue";
 

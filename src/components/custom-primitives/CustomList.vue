@@ -2,7 +2,7 @@
   <div
       class="flex gap-[1.5rem] flex-col"
   >
-    <h3 class="section-heading">
+    <h3 v-if="!$props.withoutHeading" class="section-heading">
       <slot name="heading"></slot>
     </h3>
     <ol
@@ -20,7 +20,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   props: {
     row: Boolean,
-    heading: String,
+    withoutHeading: Boolean,
   },
 })
 </script>

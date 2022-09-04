@@ -1,7 +1,10 @@
 <template>
   <div class="flex flex-col gap-md mb-md">
-    <h3 class="-heading">Разработка отраслевого стандарта по аутстаффингу сотрудников:</h3>
-    <custom-list class="gap-10">
+    <custom-list class="gap-[2rem]">
+      <template v-slot:heading>
+        Разработка отраслевого стандарта по аутстаффингу сотрудников:
+      </template>
+
       <cluster-standards-item
           v-for="standard in standards"
           :link-href="standard.link"
@@ -23,7 +26,9 @@
       </cluster-standards-item>
     </custom-list>
 
-    <WantToArdaComponent />
+    <div class="self-center">
+      <WantToArdaComponent />
+    </div>
   </div>
 
 </template>

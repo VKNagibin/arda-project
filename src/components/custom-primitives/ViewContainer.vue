@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-max min-h-[100vh] flex-col items-center w-[80%] sm:w-[90%] ">
+  <div class="flex min-h-screen flex-col items-center justify-between w-[80%] sm:w-[90%]">
     <slot></slot>
   </div>
 </template>

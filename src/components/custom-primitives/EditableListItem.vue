@@ -24,13 +24,11 @@
 import { defineComponent } from 'vue';
 import PopupComponent from "@/components/custom-primitives/PopupComponent.vue";
 import CustomList from "@/components/custom-primitives/CustomList.vue";
-import EditInput from "@/components/custom-primitives/EditInput.vue";
 
 export default defineComponent({
   components: {
     PopupComponent,
     CustomList,
-    EditInput,
   },
 
   props: {

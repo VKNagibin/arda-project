@@ -1,5 +1,5 @@
 <template>
-    <custom-list class="flex-wrap" :row="true">
+    <custom-list class="flex-wrap mb-[3rem]" :row="true">
       <template v-slot:heading>
         Вебинары
       </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full items-center">
+  <div class="flex flex-col w-full min-h-screen items-center">
     <view-container>
       <Header :signed-in="true"/>
       <router-view />

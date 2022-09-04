@@ -1,8 +1,8 @@
 export default interface User {
-    'e-mail': string,
-    name: string,
-    surname: string,
-    position: string,
-    company: string
+    'Электронная почта': string,
+    'Имя': string,
+    'Фамилия': string,
+    'Должность': string,
+    'Компания': string,
 }
 

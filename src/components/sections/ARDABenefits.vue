@@ -4,7 +4,7 @@
       <h2 class="section-heading uppercase">
         arda вам приносит пользу?
       </h2>
-      <span class="block uppercase text-arda-orange default-content lg:text-center xl:text-[1rem]">поддержите ассоциацию! членских взносов у нас нет, встречи бесплатны :)</span>
+      <span class="block uppercase text-arda-deep-orange default-content lg:text-center xl:text-[1rem]">поддержите ассоциацию! членских взносов у нас нет, встречи бесплатны :)</span>
     </div>
     <div  class="basis-1/2 flex items-center justify-end" >
       <button-component

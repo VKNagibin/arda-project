@@ -3,19 +3,19 @@
    <template v-slot:default>
      <custom-list-item :hide-markers="true">
        <div class="flex md:text-center flex-col gap-y-sm">
-         <div class="flex md:flex-col items-center gap-x-[20px]">
+         <div class="flex md:flex-col items-center justify-start gap-x-[1rem]">
 
-           <h3 class="text-[2rem] md:text-[1.5rem]" v-if="!href">
+           <h3 class="text-[1.3rem]" v-if="!href">
              <slot name="title"></slot>
            </h3>
 
-           <a v-else class="underline text-arda-deep-orange" :href="href">
-             <h3 class="text-[2rem] md:text-[1.5rem]">
+           <a v-else :href="href">
+             <h3 class="text-[1.3rem] underline text-arda-deep-orange">
              <slot name="title"></slot>
              </h3>
            </a>
 
-           <span v-if="date">
+           <span class="default-content" v-if="date">
           (<slot name="date"></slot>)
         </span>
          </div>
