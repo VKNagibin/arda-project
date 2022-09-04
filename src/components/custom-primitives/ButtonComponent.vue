@@ -1,5 +1,5 @@
 <template>
-  <button class="flex p-[.3rem_.6rem] items-center box-content justify-center font-roboto">
+  <button class="flex default-content p-[.3rem_.6rem] items-center justify-center font-roboto">
     <slot name="leftIcon"></slot>
     <slot></slot>
     <slot name="rightIcon"></slot>

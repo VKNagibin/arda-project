@@ -1,14 +1,13 @@
 <template>
   <div class="flex flex-col items-center w-screen min-h-screen">
-    <Header/>
     <view-container>
-      <template v-slot:heading>
+      <Header/>
+
         <h1 class="page-heading">
           кластер сервисных it-компаний, работающих по аутсорс- и аутстафф-форматам
         </h1>
-      </template>
 
-      <template v-slot:default>
+
         <ITCluster />
         <Agenda />
         <MarketProblems />
@@ -19,11 +18,10 @@
         <ClusterMembers />
         <Statistics />
         <ARDABenefits />
-      </template>
-
+      <Footer />
     </view-container>
 
-    <Footer />
+
   </div>
 
 </template>

@@ -23,7 +23,7 @@
           Повысить престиж сервисных компаний на рынке кадров;
         </custom-list-item>
       </custom-list>
-      <span>
+      <span class="default-content justify-self-start">
         Подробнее можно ознакомиться на сайте:
         <a class="text-arda-deep-orange" href=" https://arda.digital/">
           https://arda.digital/

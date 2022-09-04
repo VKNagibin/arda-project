@@ -9,8 +9,8 @@
         @mouseup="handleGrab"
     >
       <div
-          class="grid gap-[5rem] w-max overflow-hidden grid-flow-col justify-items-center
-         items-center grid-rows-[repeat(3,100px)] md:gap-[2rem]
+          class="grid gap-[3rem] w-max overflow-hidden grid-flow-col justify-items-center
+         items-center grid-rows-[repeat(3,100px)]
          auto-cols-[100px] "
       >
         <img v-for="(logo, logoName) in logos" class="block w-[100%] h-[100%] object-contain object-center" :src="logo" :alt="logoName">

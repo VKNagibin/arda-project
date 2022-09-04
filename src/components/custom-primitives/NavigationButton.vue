@@ -3,13 +3,13 @@
       class="flex z-100 group justify-center h-full flex-col relative"
       @click="handlePersonalPageButtonClick"
   >
-    <button-component class="flex items-center self-center">
-      <template v-slot:leftIcon>
-        <BIconPersonSquare class="text-[3rem] sm:text-[2rem] group-hover:fill-arda-orange will-change-transform group-hover:scale-[103%] transition-all duration-200"/>
-      </template>
-    </button-component>
+<!--    <button-component class="flex items-center self-center">-->
+<!--      <template v-slot:leftIcon>-->
+<!--        <BIconPersonSquare class="text-[2rem] md:text-[1.5rem] group-hover:fill-arda-orange will-change-transform group-hover:scale-[103%] transition-all duration-200"/>-->
+<!--      </template>-->
+<!--    </button-component>-->
     <a
-        class=" group-hover:text-arda-orange text-center font-roboto will-change-transform group-hover:scale-[103%] transition-all duration-200 w-full sm:text-[14px]"
+        class="block bg-arda-orange p-2 rounded-lg box-content default-content text-center will-change-transform group-hover:scale-[103%] transition-all duration-200"
         href="#">{{ linkContent }}
     </a>
   </div>
@@ -17,13 +17,6 @@
     <SignInPopup
         v-if="showSignInPopup"
         @closePopup="handleCloseSignInPopup"
-    />
-  </teleport>
-
-  <teleport to="body">
-    <Profile
-        v-if="showProfile"
-        @closeProfile="handleCloseProfile"
     />
   </teleport>
 
@@ -52,14 +45,12 @@ import { defineComponent } from 'vue';
 import SignInPopup from "@/components/popups/SignInPopup.vue";
 import ButtonComponent from "@/components/custom-primitives/ButtonComponent.vue";
 import NavbarComponent from "@/components/popups/NavbarComponent.vue";
-import Profile from "@/components/sections/UserProfile.vue";
 
 export default defineComponent({
   components: {
     SignInPopup,
     ButtonComponent,
     NavbarComponent,
-    Profile,
   },
 
   props: {

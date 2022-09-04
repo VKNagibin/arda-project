@@ -1,6 +1,6 @@
 <template>
   <img
-      class="block w-[80px] sm:w-[50px] fill-arda-orange cursor-pointer"
+      class="block w-[4rem] fill-arda-orange cursor-pointer"
       :src="$props.white ? WhiteLogo : BlackLogo"
       alt="ARDA"
       @click="handleLogoClick"

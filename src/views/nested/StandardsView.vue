@@ -26,12 +26,10 @@
     <WantToArdaComponent />
   </div>
 
-  <Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Footer from "@/components/sections/Footer.vue";
 
 import standards from "@/configs/clusterStandards";
 import ClusterStandardsItem from "@/components/custom-primitives/ClusterStandardsItem.vue";
@@ -47,7 +45,6 @@ export default defineComponent({
     CustomListItem,
     CustomList,
     WantToArdaComponent,
-    Footer,
   },
 
   data() {

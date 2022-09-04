@@ -1,9 +1,10 @@
 <template>
   <h1 class="page-heading">Гид по IT-кластеру ARDA</h1>
   <ITCluster />
-  <ClusterAims id="operativeInfo"/>
-  <AlreadyDone />
-  <Footer />
+  <div class="flex md:flex-col h-fit gap-[2rem] items-center">
+    <ClusterAims class="basis-[50%] md:basis-[100%]"/>
+    <AlreadyDone class="basis-[50%] md:basis-[100%]"/>
+  </div>
 </template>
 
 <script lang="ts">

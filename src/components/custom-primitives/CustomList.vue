@@ -1,9 +1,14 @@
 <template>
-  <div class="flex flex-col w-full gap-[1.5rem]">
+  <div
+      class="flex gap-[1.5rem] flex-col"
+  >
     <h3 class="section-heading">
       <slot name="heading"></slot>
     </h3>
-    <ol class="flex flex-col gap-[1rem]">
+    <ol
+        class="flex gap-[1rem]"
+        :class="$props.row ? 'flex-row' : 'flex-col w-full'"
+    >
       <slot></slot>
     </ol>
   </div>
@@ -14,6 +19,7 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
+    row: Boolean,
     heading: String,
   },
 })

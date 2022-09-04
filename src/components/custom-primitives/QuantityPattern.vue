@@ -4,17 +4,17 @@
       <span class="translate-y-[10px] translate-x-[-5px]">
         <ChevronRight class="fill-arda-orange" />
         <ChevronRight
-            class="fill-arda-black absolute top-0 right-0 bottom-0 left-1" width="70px" height="70px"
+            class="fill-arda-black absolute top-0 right-0 bottom-0 left-1"
         />
       </span>
-      <div class="text-[8rem] 2xl:text-[10rem] sm:text-[6rem] flex items-start font-roboto-bold relative text-arda-orange font-bold leading-none">
+      <div class="text-[4rem] lg:text-[3rem] flex items-start font-roboto-bold relative text-arda-orange font-bold leading-none">
         {{ $props.number }}
-        <div class="text-gray-900 absolute top-0 right-0 bottom-0 left-[-6px] font-normal">
+        <div class="text-gray-900 absolute top-0 right-0 bottom-0 left-[-2px] font-normal">
           {{ $props.number }}
         </div>
       </div>
     </div>
-    <span class="text-[2rem] w-full font-oswald text-center">{{ $props.title }}</span>
+    <span class="default-content w-full font-oswald text-center">{{ $props.title }}</span>
   </div>
 </template>
 

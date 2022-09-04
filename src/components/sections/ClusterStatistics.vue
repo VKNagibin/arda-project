@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col w-full mb-md p-[40px] border-[2px] border-arda-grey rounded-[6px]">
-    <div class="flex w-full 2xl:flex-col justify-between md:items-center mb-sm">
-      <QuantityPattern class="basis-1/3" number="300" title="агенств-участников" />
-      <QuantityPattern class="basis-1/3" number="25" title="городов РФ" />
-      <QuantityPattern class="basis-1/3" number="4000" title="сотрудников в агентствах-участниках" />
+  <div class="flex flex-col w-full mb-md p-[2rem] border-[2px] border-arda-grey rounded-[6px]">
+    <div class="flex w-full md:flex-col justify-between md:items-center mb-sm">
+      <QuantityPattern number="300" title="агенств-участников"/>
+      <QuantityPattern number="25" title="городов РФ"/>
+      <QuantityPattern number="4000" title="сотрудников в агентствах-участниках"/>
     </div>
 
-    <div class="flex w-full ml-auto 2xl:justify-center justify-end">
+    <div class="flex w-full ml-auto md:justify-center justify-end">
         <button-component
             class="btn btn-outline flex"
         >

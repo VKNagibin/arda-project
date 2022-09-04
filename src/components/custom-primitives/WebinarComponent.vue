@@ -1,5 +1,5 @@
 <template>
-  <card-component class="w-50%" :resetMargins="true">
+  <card-component class="w-[50%]" :resetMargins="true">
     <custom-list-item :hide-markers="true">
       <div class="flex md:text-center flex-col gap-y-sm">
 
@@ -7,7 +7,7 @@
           <slot name="title"></slot>
         </h3>
 
-        <a class="arda-link" :href="link">
+        <a class="arda-link" :href="$props.link">
           смотреть вебинар
         </a>
 
